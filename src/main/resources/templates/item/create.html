@@ -7,14 +7,16 @@
 <body>
     <h1>Create New Item</h1>
     <form action="#" th:action="@{/items}" th:object="${item}" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" th:field="*{name}" required/>
-        <br/>
-        <label for="description">Description:</label>
-        <input type="text" id="description" th:field="*{description}" required/>
-        <br/>
-        <button type="submit">Create</button>
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" class="material-input" required/>
+        </div>
+        <div class="input-field">
+            <label for="description">Description:</label>
+            <input type="text" id="description" th:field="*{description}" class="material-input" required/>
+        </div>
+        <button class="material-button" type="submit">Create</button>
     </form>
-    <a href="/items">Back to List</a>
+    <a class="material-button" href="/items">Back to List</a>
 </body>
 </html>
