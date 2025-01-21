@@ -1,5 +1,8 @@
 package com.crud.app;
 
-public class ItemRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ItemRepository extends JpaRepository<Item, Long> {
+
     
 }
